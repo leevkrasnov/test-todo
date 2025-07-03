@@ -1,11 +1,13 @@
 import styled from 'styled-components'
+import { useState } from 'react'
+
 import TitleHeader from './components/TitleHeader'
 import AddTaskSection from './components/AddTaskSection'
 import FilterSection from './components/FilterSection'
 import TasksFooter from './components/TasksFooter'
 import TasksList from './components/TaskList'
+
 import { useTasks } from './hooks/useTasks'
-import { useState } from 'react'
 
 export default function App() {
   const { tasks, addTask, toggleTask, deleteTask, clearCompleted } = useTasks()
