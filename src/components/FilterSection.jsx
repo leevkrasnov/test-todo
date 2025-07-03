@@ -57,17 +57,18 @@ const FilterButton = styled.button`
   border-radius: 0.375rem;
   cursor: pointer;
   transition: all 0.2s ease;
+  font-weight: 700;
 
   ${(props) =>
     props.$active
       ? `
     background-color: white;
-    color: ${({ theme }) => theme.colors.blue};
+    color: #1560BD;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   `
       : `
     background-color: transparent;
-    color: #3f4f5a;
+    color: #647482;
     
     &:hover {
       color: #1a2b35;

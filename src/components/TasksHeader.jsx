@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import { ClipboardCheck } from 'lucide-react'
 
-export default function Header() {
+export default function TasksHeader() {
   return (
     <Wrapper>
-      <Icon />
-      <Title>Список задач</Title>
+      <HeaderIcon />
+      <HeaderTitle>Список задач</HeaderTitle>
     </Wrapper>
   )
 }
@@ -16,13 +16,13 @@ const Wrapper = styled.header`
   column-gap: clamp(0.5rem, 1.6vw, 2.5rem);
 `
 
-const Icon = styled(ClipboardCheck)`
+const HeaderIcon = styled(ClipboardCheck)`
   width: ${({ theme }) => theme.size.basic};
   height: ${({ theme }) => theme.size.basic};
   color: ${({ theme }) => theme.colors.blue};
 `
 
-const Title = styled.h1`
+const HeaderTitle = styled.h1`
   font-size: ${({ theme }) => theme.size.basic};
   color: ${({ theme }) => theme.colors.text};
 `

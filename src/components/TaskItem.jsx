@@ -26,16 +26,17 @@ export default function TaskItem({ task, toggleTask, deleteTask }) {
 
 const Wrapper = styled.div`
   padding: ${({ theme }) => theme.size.sm};
+
   display: flex;
   align-items: center;
   gap: 1rem;
-  border-bottom: 1px solid hsl(215, 20%, 90%);
+
+  border-bottom: 1px solid #d9e1e9;
   transition: background-color 0.15s ease;
-  background-color: ${(props) =>
-    props.$completed ? 'hsl(216, 20%, 98%)' : 'white'};
+  background-color: ${(props) => (props.$completed ? '#f7f9fb' : '#fff')};
 
   &:hover {
-    background-color: hsl(216, 20%, 97%);
+    background-color: #f7f9fb;
   }
 
   .delete-button {
@@ -45,6 +46,10 @@ const Wrapper = styled.div`
 
   &:hover .delete-button {
     opacity: 1;
+  }
+
+  &:last-child {
+    border-bottom: none;
   }
 `
 
@@ -82,7 +87,7 @@ const DeleteButton = styled.button`
   padding: 0.5rem;
   border: none;
   background: transparent;
-  color: hsl(215, 15%, 60%);
+  color: ${({ theme }) => theme.colors.lightGray};
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.2s ease;
