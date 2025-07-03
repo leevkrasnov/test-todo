@@ -7,11 +7,11 @@ export default function TasksFooter({
 }) {
   return (
     <Wrapper>
-      <FooterStats>
-        <span>{activeCount} активные задачи</span>
+      <StatsContainer>
+        {activeCount} <TextInfo>активные задачи</TextInfo>
         <FooterSeparator>•</FooterSeparator>
-        <span>{completedCount} выполнено</span>
-      </FooterStats>
+        {completedCount} <TextInfo>выполнено</TextInfo>
+      </StatsContainer>
       {completedCount > 0 && (
         <ClearButton onClick={clearCompleted}>Очистить выполненные</ClearButton>
       )}
@@ -33,14 +33,23 @@ const Wrapper = styled.div`
   color: ${({ theme }) => theme.colors.lightGray};
 `
 
-const FooterStats = styled.div`
-  display: flex;
-  align-items: center;
-  gap: clamp(0.5rem, 2vw, 1rem);
+const FooterSeparator = styled.span`
+  margin: 0 1rem;
+  color: ${({ theme }) => theme.colors.lightGray};
 `
 
-const FooterSeparator = styled.span`
-  color: ${({ theme }) => theme.colors.lightGray};
+const StatsContainer = styled.span`
+  display: flex;
+  align-items: center;
+`
+
+const TextInfo = styled.span`
+  display: block;
+  margin-left: 0.2rem;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `
 
 const ClearButton = styled.button`

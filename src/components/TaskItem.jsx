@@ -25,11 +25,10 @@ export default function TaskItem({ task, toggleTask, deleteTask }) {
 }
 
 const Wrapper = styled.div`
-  padding: ${({ theme }) => theme.size.sm};
+  padding: ${({ theme }) => theme.size.xs};
 
   display: flex;
   align-items: center;
-  gap: 1rem;
 
   border-bottom: 1px solid #d9e1e9;
   transition: background-color 0.15s ease;

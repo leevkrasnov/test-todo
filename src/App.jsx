@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import TasksHeader from './components/TasksHeader'
+import TitleHeader from './components/TitleHeader'
 import AddTaskSection from './components/AddTaskSection'
 import FilterSection from './components/FilterSection'
 import TasksFooter from './components/TasksFooter'
@@ -27,7 +27,7 @@ export default function App() {
 
   return (
     <Wrapper>
-      <TasksHeader />
+      <TitleHeader />
       <TodoContainer>
         <AddTaskSection addTask={addTask} />
         <FilterSection
@@ -69,4 +69,8 @@ const TodoContainer = styled.main`
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border: 1px solid ${({ theme }) => theme.colors.gray};
   overflow: hidden;
+
+  @media (max-width: 800px) {
+    width: 80vw;
+  }
 `

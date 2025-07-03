@@ -28,7 +28,7 @@ export default function FilterSection({ setFilter, currentFilter }) {
 }
 
 const Wrapper = styled.div`
-  padding: ${({ theme }) => theme.size.sm};
+  padding: ${({ theme }) => theme.size.xs};
 
   border-bottom: 1px solid ${({ theme }) => theme.colors.gray};
   background: #fff;

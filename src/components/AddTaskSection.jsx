@@ -29,7 +29,7 @@ export default function AddTaskSection({ addTask }) {
 }
 
 const Wrapper = styled.div`
-  padding: ${({ theme }) => theme.size.sm};
+  padding: ${({ theme }) => theme.size.xs};
   border-bottom: 1px solid ${({ theme }) => theme.colors.gray};
 
   background-color: ${({ theme }) => theme.colors.background};
@@ -38,6 +38,11 @@ const Wrapper = styled.div`
 const AddTaskForm = styled.form`
   display: flex;
   gap: ${({ theme }) => theme.size.sm};
+
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 const TaskInput = styled.input`
@@ -68,6 +73,7 @@ const AddButton = styled.button`
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
   background-color: ${({ theme }) => theme.colors.blue};
   color: #fff;

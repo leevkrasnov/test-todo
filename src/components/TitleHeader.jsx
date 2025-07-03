@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { ClipboardCheck } from 'lucide-react'
 
-export default function TasksHeader() {
+export default function TitleHeader() {
   return (
     <Wrapper>
       <HeaderIcon />
